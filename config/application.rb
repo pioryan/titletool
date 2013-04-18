@@ -1,5 +1,4 @@
 require File.expand_path('../boot', __FILE__)
-require 'google/api_client'
 require 'rails/all'
 
 if defined?(Bundler)
@@ -63,28 +62,19 @@ module Titletool
       g.template_engine :haml
     end
 
-    #config.my_search_client = Google::APIClient.new
-    #config.google_search = config.my_search_client.discovered_api('customsearch')
-    #
-    #config.my_search_client.authorization.client_id = '1073801860784-8g9c2sb2me51u3hprca2vv130jnj9kfs.apps.googleusercontent.com'
-    #config.my_search_client.authorization.client_secret = 'TBCGdej_Aup-FDOj8Sjxv76K'
-    #config.my_search_client.authorization.redirect_uri = 'https://titletool.herokuapp.com/oauth2callback'
-    #
-    #config.my_search_client.authorization.scope = 'https://www.googleapis.com/auth/plus.me'
-    #
-    ## Request authorization
-    #redirect_uri = config.my_search_client.authorization.authorization_uri
-    #
-    ## Wait for authorization code then exchange for token
-    #config.my_search_client.authorization.code = '....'
-    #config.my_search_client.authorization.fetch_access_token!
-    #
-    #def google_search_client
-    #  config.my_search_client
-    #end
-    #
-    #def google_search
-    #  config.google_search
-    #end
+    config.custom_search = YAML.load_file(Rails.root + "config/custom_search.yml").symbolize_keys
+
+    def engine_ids
+      config.custom_search[:engine_id]
+    end
+
+    def google_api_key
+      config.custom_search[:api_key]
+    end
+
+    def custom_search_endpoint
+      config.custom_search[:endpoint]
+    end
+
   end
 end

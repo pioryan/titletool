@@ -1,0 +1,7 @@
+endpoint: https://www.googleapis.com/customsearch/v1
+api_key: AIzaSyA29lR6PJ9ewz-AVrHRkREoBSl3dWCqYc0
+engine_id:
+  articles: 015638601816746880509:hsr2y6jkqbc
+  blogs: 015638601816746880509:x91kch1thau
+  books: 015638601816746880509:t2u3fxc6sa8
+  news: 015638601816746880509:4bturjvg7ee

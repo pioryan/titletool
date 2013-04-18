@@ -6,13 +6,9 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'haml'
-gem "aws-sdk", "~> 1.5.2"
-gem "unicorn", "~> 4.3.1"
 gem 'newrelic_rpm'
-gem "asset_sync"
 gem "rails_autolink", "~> 1.0.9"
 gem 'recaptcha', :require => 'recaptcha/rails'
-gem "google-api-client"
 gem "curb"
 
 
@@ -40,7 +36,6 @@ end
 
 group :development do
   gem 'better_errors'
-  gem 'rails-dev-tweaks', '~> 0.6.1'
   gem "binding_of_caller"
 end
 
@@ -49,12 +44,6 @@ group :development, :test do
   gem 'rspec-rails', '~> 2.8.0'
   gem 'rspec2-rails-views-matchers', '>= 0.1.6'
   gem 'rspec-prof'
-  #gem 'linecache19', :git => 'git://github.com/mark-moseley/linecache'
-  #gem 'ruby-debug-base19x', '~> 0.11.30.pre4'
-  #gem 'ruby-debug19'
-  #gem 'linecache19', '~> 0.5.13'
-  #gem 'ruby-debug-ide', '~> 0.4.17.beta14'
-  #gem 'ruby-debug-base19x', '~> 0.11.30.pre10'
   gem "fixture_builder", "~> 0.3.3"
   gem 'shoulda-matchers', '~> 1.2.0'
   gem 'fuubar'
