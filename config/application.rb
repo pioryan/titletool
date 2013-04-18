@@ -1,5 +1,5 @@
 require File.expand_path('../boot', __FILE__)
-
+require 'google/api_client'
 require 'rails/all'
 
 if defined?(Bundler)
@@ -62,5 +62,29 @@ module Titletool
     config.generators do |g|
       g.template_engine :haml
     end
+
+    #config.my_search_client = Google::APIClient.new
+    #config.google_search = config.my_search_client.discovered_api('customsearch')
+    #
+    #config.my_search_client.authorization.client_id = '1073801860784-8g9c2sb2me51u3hprca2vv130jnj9kfs.apps.googleusercontent.com'
+    #config.my_search_client.authorization.client_secret = 'TBCGdej_Aup-FDOj8Sjxv76K'
+    #config.my_search_client.authorization.redirect_uri = 'https://titletool.herokuapp.com/oauth2callback'
+    #
+    #config.my_search_client.authorization.scope = 'https://www.googleapis.com/auth/plus.me'
+    #
+    ## Request authorization
+    #redirect_uri = config.my_search_client.authorization.authorization_uri
+    #
+    ## Wait for authorization code then exchange for token
+    #config.my_search_client.authorization.code = '....'
+    #config.my_search_client.authorization.fetch_access_token!
+    #
+    #def google_search_client
+    #  config.my_search_client
+    #end
+    #
+    #def google_search
+    #  config.google_search
+    #end
   end
 end

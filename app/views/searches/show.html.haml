@@ -1,0 +1,3 @@
+%table.table
+  = render :partial => "searches/item", :collection => items, :as => :article
+  = render :partial => "searches/result", :locals =>   {items: items}

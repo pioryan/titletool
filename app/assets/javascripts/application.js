@@ -11,5 +11,7 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require jquery_ujs
+//= require vendor/rails
 //= require bootstrap
+//= require_tree ./app
+//= require_self

@@ -12,6 +12,8 @@ gem 'newrelic_rpm'
 gem "asset_sync"
 gem "rails_autolink", "~> 1.0.9"
 gem 'recaptcha', :require => 'recaptcha/rails'
+gem "google-api-client"
+gem "curb"
 
 
 # Gems used only for assets and not required
